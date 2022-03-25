@@ -12,7 +12,7 @@ const { Configuration, OpenAIApi } = require("openai");
 function App() {
 
   const [userInput, setUserInput] = useState('')
-  const [media, setMedia] = useState("song")
+  const [media, setMedia] = useState("Song")
   const [recommendation, setRecommendation] = useState('')
 
 
@@ -55,7 +55,7 @@ function App() {
 	<div class="container mx-auto bg-indigo-500 rounded-lg p-14 shadow-xl">
 		<div class>
       <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/271/robot_1f916.png" className='mx-auto animate-bounce'></img>
-			<h1 class="text-center font-bold font-sans text-indigo-200 text-5xl py-5 pb-10 leading-loose">Melobot Recommends <br></br> <span className='text-white'>{recommendation}</span></h1>
+			<h1 class="text-center font-bold font-sans text-indigo-200 text-5xl py-5 pb-10 leading-loose">Melobot Recommends A {media}: <br></br> <span className='text-white'>{recommendation}</span></h1>
 				<div class="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between shadow-xl">
 					<input class="text-xl text-black flex-grow outline-none py-5 px-2" type="text" placeholder="that will make me cry" 
           onChange={(e) => setUserInput(e.target.value)}
@@ -66,8 +66,8 @@ function App() {
                       onChange={(e) => setMedia(e.target.value)}
                       value={media}
             >
-            <option value="song" selected>Song</option>
-            <option value="movie">Movie</option>
+            <option value="Song" selected>Song</option>
+            <option value="Movie">Movie</option>
           </select>
 						<button class="text-md font-bold bg-indigo-600 text-white outline-none border-2 px-10 py-5 rounded-lg"
             onClick={makeOpenAICall}
