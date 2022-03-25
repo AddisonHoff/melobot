@@ -17,7 +17,7 @@ function App() {
 
 
   async function makeOpenAICall() {
-    console.log(process.env.OPENAI_API_KEY)
+    console.log(process.env.REACT_APP_OPENAI_API_KEY)
     const configuration = new Configuration({
       apiKey: process.env.OPENAI_API_KEY,
     });
