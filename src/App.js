@@ -74,6 +74,7 @@ function App() {
             >Search</button>
 					</div>
 				</div>
+         <a  className="text-white" href="https://twitter.com/OnlineBabylon">by @OnlineBabylon</a>
 		</div>
 	</div>
 </div>
