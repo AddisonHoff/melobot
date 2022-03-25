@@ -9,7 +9,6 @@ const { Configuration, OpenAIApi } = require("openai");
 
 
 
-
 function App() {
 
   const [userInput, setUserInput] = useState('')
@@ -20,7 +19,7 @@ function App() {
   async function makeOpenAICall() {
 
     const configuration = new Configuration({
-      apiKey: "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",
+      apiKey: process.env.OPENAI_API_KEY,
     });
       const openai = new OpenAIApi(configuration);
       let callInput = ""
